@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario de Eventos</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Eventos Actuales</h1>
+        <a href="/add/">Agregar Evento</a>
+        
+        <!-- Tabla de eventos -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Evento</th>
+                    <th>Categoría</th>
+                    <th>Fecha</th>
+                    <th>Acciones</th> <!-- Columna para las acciones -->
+                </tr>
+            </thead>
+            <tbody>
+                {% for event in events %}
+                <tr>
+                    <td>{{ event.event }}</td>
+                    <td>{{ event.category }}</td>
+                    <td>{{ event.date }}</td>
+                    <td> <!-- Acciones de editar y eliminar -->
+                        <a href="/update/{{ event.id }}/">Editar</a> | 
+                        <a href="/delete/{{ event.id }}/">Eliminar</a>
+                    </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="4">No hay eventos actuales.</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

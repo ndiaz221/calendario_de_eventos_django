@@ -1,0 +1,8 @@
+python -m venv .venv
+
+.venv/Scripts/activate
+
+
+pip install django ==4.0
+pip install mysqlclient
+pip install cgi-legacy

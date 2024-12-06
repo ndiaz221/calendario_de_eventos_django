@@ -1,0 +1,98 @@
+body {
+  background: linear-gradient(45deg, #f0f0f0, #e6e6e6);  /* Fondo sutil con gradiente */
+  font-family: 'Roboto', sans-serif;  /* Fuente moderna y legible */
+  margin: 0;
+  padding: 0;
+  height: 100vh;  /* Asegura que la página ocupe toda la altura de la ventana */
+  display: flex;
+  justify-content: center;
+  align-items: center;  /* Centra el contenido en el centro de la pantalla */
+}
+
+/* Contenedor principal que centra el contenido */
+.container {
+  width: 80%;  /* Ajusta al 80% del ancho de la ventana */
+  max-width: 900px;  /* Evita que sea demasiado ancho */
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);  /* Fondo blanco con transparencia */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Sombra sutil */
+}
+
+/* Estilos para los títulos */
+h1, h2 {
+  color: #333;  /* Gris oscuro para los títulos */
+  margin-bottom: 20px;
+}
+
+/* Estilo para los enlaces */
+a {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #4CAF50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos para la tabla */
+table {
+  width: 100%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Sombra sutil */
+  background-color: #fff;  /* Fondo blanco para la tabla */
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  background-color: #4CAF50;  /* Color verde para el encabezado */
+  color: white;
+}
+
+td {
+  color: #333;
+}
+
+td a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+td a:hover {
+  text-decoration: underline;
+}
+
+/* Estilo de botones */
+button {
+  background-color: #4CAF50;  /* Verde profesional */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar Evento</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>¿Estás seguro de que quieres eliminar este evento?</h1>
+        <p>{{ event.event }} - {{ event.category }} - {{ event.date }}</p>
+        
+        <form method="POST">
+            {% csrf_token %}
+            <button type="submit">Sí, eliminar</button>
+        </form>
+        
+        <br>
+        
+        <a href="/">Cancelar</a>
+    </div>
+</body>
+</html>
