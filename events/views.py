@@ -5,12 +5,12 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .models import Event
 from .forms import EventForm  # Esto es lo correcto
 
-
+#funcioon que nos mestra los eventos actuales
 def get_events(request):
     events = Event.objects.all()
     return render(request, 'index.html', {'events': events})
 
-
+#funcion que nos permite anadir eventos
 def add_event(request):
     if request.method == 'POST':
         event = request.POST['event']
@@ -20,6 +20,7 @@ def add_event(request):
         return redirect('get_events')
     return render(request, 'add_event.html')
 
+#funcion que nos permite acyualezar nuestros eventos
 def update_event(request, id):
     event = get_object_or_404(Event, id=id)
     
@@ -35,23 +36,8 @@ def update_event(request, id):
 
 
 
+#funcion que nos permite eliminar los eventos
 
-
-''''def update_event(request, id):
-    event = get_object_or_404(Event, id=id)
-    if request.method == 'POST':
-        event.event = request.POST['event']
-        event.category = request.POST['category']
-        event.date = request.POST['date']
-        event.save()
-        return redirect('get_events')
-    return render(request, 'update_event.html', {'event': event})'''
-
-
-'''def delete_event(request, id):
-    event = get_object_or_404(Event, id=id)
-    event.delete()
-    return redirect('get_events')'''
 
 def delete_event(request, id):
     event = get_object_or_404(Event, id=id)
